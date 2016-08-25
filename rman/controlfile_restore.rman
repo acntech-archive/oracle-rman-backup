@@ -1,0 +1,21 @@
+SHUTDOWN IMMEDIATE;
+STARTUP NOMOUNT;
+RESTORE CONTROLFILE TO '/u01/app/oracle/fast_recovery_area/XE/controlfile/current_controlfile.ctl' FROM '/var/backups/rman/controlfile/current_controlfile.bak';
+ALTER DATABASE MOUNT;
+
+
+...
+
+SET DBID 
+
+CATALOG START WITH '/var/backups/rman/database';
+
+
+RESTORE DATABASE;
+RESTORE ARCHIVELOG ALL;
+
+...
+
+
+RECOVER DATABASE;
+ALTER DATABASE OPEN RESETLOGS;
