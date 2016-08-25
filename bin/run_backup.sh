@@ -26,7 +26,7 @@ fi
 RMAN_SCRIPT_DIR="$( cd "${SCRIPT_DIR}/../rman"; pwd )"
 RMAN_SCRIPT="${RMAN_SCRIPT_DIR}/${RMAN_BACKUP_SCRIPT}"
 
-if [ ! $( which rman > /dev/null 2>&1 ) ]; then
+if [ ! which rman > /dev/null 2>&1 ]; then
    echo "Error: RMAN command not found. Cannot continue, exiting..."
    exit 1
 fi
