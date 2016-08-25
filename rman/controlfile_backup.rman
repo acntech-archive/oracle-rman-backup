@@ -1,0 +1,1 @@
+BACKUP CURRENT CONTROLFILE FORMAT '/var/backups/rman/controlfile/controlfile_%u_%n_%I_%T.bak';
